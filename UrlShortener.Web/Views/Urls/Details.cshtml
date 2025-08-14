@@ -1,0 +1,10 @@
+﻿@model UrlShortener.Web.Models.Domain.UrlMapping
+@{ ViewData["Title"] = "Short URL Info"; }
+<h3>Short URL Info</h3>
+<dl class="row">
+    <dt class="col-sm-3">Original URL</dt><dd class="col-sm-9">@Model.OriginalUrl</dd>
+    <dt class="col-sm-3">Short</dt><dd class="col-sm-9"><a href="/u/@Model.ShortCode" target="_blank">@Model.ShortCode</a></dd>
+    <dt class="col-sm-3">Created By</dt><dd class="col-sm-9">@Model.CreatedBy.Username</dd>
+    <dt class="col-sm-3">Created At</dt><dd class="col-sm-9">@Model.CreatedOn.ToString("g")</dd>
+    
+</dl>

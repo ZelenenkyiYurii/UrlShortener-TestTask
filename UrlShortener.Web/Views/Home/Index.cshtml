@@ -1,0 +1,19 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Home";
+    var username = HttpContextAccessor.HttpContext?.Session.GetString("Username");
+}
+<div>
+    <h1>Welcome to UrlShortener</h1>
+    @if(string.IsNullOrEmpty(username)){
+    <p>
+        Please <a asp-controller="Account" asp-action="Login">log in</a> to manage your short URLs.
+    </p>
+    }
+    else{
+    <p>
+        Go to <a asp-controller="Urls" asp-action="Index">Short URLs</a>
+    </p>
+    }
+    
+</div>

@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "URLs";
+}
+<div class="row mt-4">
+    <div class="col-12">
+        <urls-app-root></urls-app-root>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/dist/browser/styles.css">
+
+    <!-- 2. Поліфіли (для сумісності) -->
+    <script src="~/dist/browser/polyfills.js" type="module"></script>
+
+    <!-- 3. Головний скрипт додатку -->
+    <script src="~/dist/browser/main.js" type="module"></script>
+}

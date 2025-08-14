@@ -1,0 +1,37 @@
+﻿@model UrlShortener.Web.Models.Domain.AboutContent
+
+@{
+    ViewData["Title"] = "About";
+    var isAdmin = User.IsInRole("Admin");
+}
+
+<h2>@Model?.Title ?? "About URL Shortener"</h2>
+
+<div class="mb-4">
+    @if (!string.IsNullOrEmpty(Model?.Content))
+    {
+        <p>@Model.Content</p>
+    }
+    else
+    {
+        <p>No content available.</p>
+    }
+</div>
+
+@if (isAdmin)
+{
+    <h4>Edit Content</h4>
+    <form asp-action="Update" method="post">
+        <div class="form-group mb-3">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="@Model?.Title" class="form-control" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="content">Content</label>
+            <textarea name="content" rows="6" class="form-control">@Model?.Content</textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+}

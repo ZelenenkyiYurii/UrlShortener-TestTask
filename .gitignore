@@ -1,0 +1,74 @@
+# ============== #
+# Visual Studio #
+# ============== #
+*.sln.DotSettings.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vspscc
+
+# ======================== #
+# Rider / Resharper cache #
+# ======================== #
+_ReSharper.*/
+*.[Rr]e[Ss]harper
+
+# ================= #
+# .NET / C#        #
+# ================= #
+[Bb]in/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+obj/
+publish/
+**/artifacts
+*.pyc
+*.pyo
+*.pyd
+
+# ===================== #
+# Entity Framework Core #
+# ===================== #
+*-Migration-*.zip
+
+# ================= #
+# Node.js / Angular #
+# ================= #
+# Журнали
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Папка з пакетами
+node_modules/
+
+# Файли середовища
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Папки для компіляції та кешу Angular
+/dist/
+/tmp/
+/out-tsc/
+/coverage/
+
+# ==================== #
+# Операційна система #
+# ==================== #
+.DS_Store
+Thumbs.db
